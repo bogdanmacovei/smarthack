@@ -6,10 +6,13 @@
 </head>
 <body ng-app = "messageboard">
 	<div ng-controller = "showMessages">
-		{{var}}
-		<li ng-repeat = "x in messages">
-			{{x.subject}}
-		</li>
+		<fieldset ng-repeat = "x in messages">
+			<b>{{x.subject}}</b> 
+				<br> by <b>{{nume}}</b> at <b>{{x.date}}</b>
+			<br> <br>
+			{{x.content}}
+
+		</fieldset>
 	</div>
 
 <script src = "messageboardui.js"> </script>

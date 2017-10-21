@@ -28,16 +28,31 @@ module.exports = function (app, mongoose, bcrypt) {
 			});
 	});
 
+	// select user by id 
+
+	app.get ('/selectUserById/:id', function (req, res) {
+		User.findOne ({_id: req.params.id})
+			.catch (err => {
+				console.log (err);
+			})
+			.then (result => {
+				res.send (result.username);
+			});
+	});
+
 	// Authentication
 
 	app.post ('/auth', function (req, res) {
-		User.findOne({_id: req.body._id})
+		User.findOne({username: req.body.username})
 			.catch (err => {
 				console.log (err);
 			})
 			.then (result => {
 				if (bcrypt.compareSync(req.body.pwd, result.pwd))
-					res.send ({result: 'true'});
+					res.send ({
+						result: 'true',
+						id: result._id
+					});
 				else 
 					res.send ({result: 'false'});
 			});
