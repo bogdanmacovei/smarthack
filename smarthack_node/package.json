@@ -1,0 +1,11 @@
+{
+  "name": "smarthack",
+  "version": "1.0.0",
+  "description": "smarthack project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lucian b, marian l, bogdan m",
+  "license": "ISC"
+}
