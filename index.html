@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="default.css">
+</head>
+
+
+<body ng-app = "mainPage">
+	<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header1">
+			<div ng-controller = "myController">Bine ai venit,<span>{{nume}}!</span></div>
+		</div>
+		<br>
+		<div ng-controller = "logOut" class = "login">
+
+			<input ng-click = "logout()" type="button" value="Logout">
+
+		</div>
+	</div>
+
+<script src = "indexui.js"> </script>
+
+</body>
+</html>
