@@ -3,15 +3,41 @@
 <head>
 	<title>Login</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="default.css">
 </head>
+
+
 <body ng-app = "login">
-	<div ng-controller = "sendData">
-		Username: <br> <input type = "text" ng-model = "username"> <br>
-		Password: <br> <input type = "password" ng-model = "pwd"> <br>
+	<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>the<span>Prime</span></div>
+		</div>
+		<br>
+		<div class = "login" ng-controller = "sendData">
+			<input type = "text" ng-model = "username" placeholder="username" name="user"> <br>
+			<input type = "password" ng-model = "pwd" placeholder="password" name="password"> <br>
 
-		<button ng-click = "login()"> Log in! </button>
-	</div>
-
+			<input ng-click = "login()" type="button" value="Login">
+		</div>
+	<div>
 	<script src = "loginui.js"> </script>
+
 </body>
 </html>
+
+<!-- </head>
+
+<body>
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Site<span>Random</span></div>
+		</div>
+		<br>
+		<div class="login">
+				<input type="text" placeholder="username" name="user"><br>
+				<input type="password" placeholder="password" name="password"><br>
+				<input type="button" value="Login">
+		</div>
+  
