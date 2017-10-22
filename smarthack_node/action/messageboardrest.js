@@ -29,7 +29,7 @@ module.exports = function (app, mongoose, bcrypt) {
 				console.log (err);
 			})
 			.then (result => {
-				console.log (result);
+				res.send (result);
 			});
 	});
 
